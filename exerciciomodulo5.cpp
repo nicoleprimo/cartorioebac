@@ -3,18 +3,18 @@
 #include <locale.h> //biblioteca de alocacoes de texto por regiao
 #include <string.h> //biblioteca responsavel por cuidar das string
 
-int registro () // funÁ„o responsavel por cadastrar os usuarios no sistema
+int registro () // fun√ß√£o responsavel por cadastrar os usuarios no sistema
 
 {
-	//inicio criaÁ„o de variaveis/string
+	//inicio cria√ß√£o de variaveis/string
     char arquivo[40];
     char cpf[40];
     char nome[40];
     char sobrenome[40];
     char cargo[40];
-    //final da criaÁ„o de variaveis/string
+    //final da cria√ß√£o de variaveis/string
 
-    printf("Por favor, digite o CPF a ser cadastrado: "); //coletando informaÁ„o do usuario
+    printf("Por favor, digite o CPF a ser cadastrado: "); //coletando informa√ß√£o do usuario
     scanf("%s", cpf); //%s refere-se a strings
 
     strcpy(arquivo, cpf); //responsavel por copiar os valores das strings
@@ -77,12 +77,12 @@ int consulta ()
     
     if(file == NULL)
     {
-        printf("N„o foi possÌvel abrir o arquivo. Dados n„o localizados. \n");
+        printf("N√£o foi poss√≠vel abrir o arquivo. Dados n√£o localizados. \n");
     }
 
     while(fgets(conteudo, 200, file) != NULL)
     {
-        printf("\n Essas s„o as informaÁıes do usu·rio: ");
+        printf("\n Essas s√£o as informa√ß√µes do usu√°rio: ");
         printf("%s", conteudo);
         printf("\n\n");
     }
@@ -106,7 +106,7 @@ int deletar ()
 	if(file == NULL)
 	
 	{ 
-		printf("O usu·rio n„o consta em sistema. \n");
+		printf("O usu√°rio n√£o consta em sistema. \n");
 		system("pause");
 	}
 	
@@ -125,22 +125,22 @@ int main ()
     
         setlocale (LC_ALL, "portuguese"); //definicao do idioma
    
-        printf("### CartÛrio da EBAC ### \n \n"); //inicio do menu
-        printf("Escolha a opÁ„o desejada do menu: \n \n");
+        printf("### Cart√≥rio da EBAC ### \n \n"); //inicio do menu
+        printf("Escolha a op√ß√£o desejada do menu: \n \n");
         printf("\t1 - Registrar nomes\n");
         printf("\t2 - Consultar nomes\n");
         printf("\t3 - Deletar nomes\n "); 
-		printf("\t4 - Sair do sistema \n \n");
-        printf("Digite a opÁ„o: "); //fim do menu
+	printf("\t4 - Sair do sistema \n \n");
+        printf("Digite a op√ß√£o: "); //fim do menu
     
         scanf("%d", &opcao); //armazenamento da escolha do usuario
 
         system("cls"); 
 
-        switch(opcao) //inicio da seleÁ„o do menu
+        switch(opcao) //inicio da sele√ß√£o do menu
         {
                 case 1:
-                registro(); //chamada de funÁıes
+                registro(); //chamada de fun√ß√µes
                 break;
 
                 case 2:
@@ -152,15 +152,15 @@ int main ()
                 break;
                 
                 case 4:
-                printf("Obrigadx por utilizar nosso sistema! \n AtÈ logo! :) \n");
+                printf("Obrigadx por utilizar nosso sistema! \n At√© logo! :) \n");
                 return 0;
                 break;
 
                 default: 
-                printf("Essa opÁ„o n„o est· disponivel");
+                printf("Essa op√ß√£o n√£o est√° disponivel");
                 system("pause");
                 break;
-        }//fim da seleÁ„o
+        }//fim da sele√ß√£o
         
      }
 }
